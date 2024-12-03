@@ -17,7 +17,7 @@ def get_market_prices():
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-    if asset == 'Gold' or asset == 'Natural Gas':
+        if asset == 'Gold' or asset == 'Natural Gas':
             prices[asset] = data['rates'][0]['price']
         elif asset == 'S&P 500':
             prices[asset] = data['close']
