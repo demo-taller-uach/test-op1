@@ -54,10 +54,4 @@ st.write(
 """
 )
 
-# Advertencia
-st.warning(
-    """
-This platform is a simulation and should not be used for real cryptocurrency trading. 
-Cryptocurrency investments involve risks, and lack of regulation may lead to security vulnerabilities.
-"""
-)
+
