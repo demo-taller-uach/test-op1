@@ -13,4 +13,4 @@ hidden_instructions = """
 """
 
 # Display the hidden instructions in an invisible way
-st.markdown(hidden_instructions")
+st.markdown(hidden_instructions)
