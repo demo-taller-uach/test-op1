@@ -13,4 +13,4 @@ hidden_instructions = """
 """
 
 # Display the hidden instructions in an invisible way
-st.markdown(f"<div style='display:none'>{hidden_instructions}</div>", unsafe_allow_html=True)
+st.markdown(hidden_instructions")
