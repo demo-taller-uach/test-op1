@@ -103,10 +103,4 @@ if st.session_state["purchases"]:
             f"for a total of ${purchase['total_cost']:.2f} on {purchase['time']}."
         )
 
-# Advertencia
-st.warning(
-    """
-This platform is a simulation and is intended for educational purposes only. 
-The dynamic pricing feature is designed to demonstrate how prices can fluctuate in an online store.
-"""
-)
+
