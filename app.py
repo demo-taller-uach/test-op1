@@ -6,8 +6,8 @@ import pandas as pd
 def get_market_prices():
     # API endpoints for market prices (replace with actual API endpoints)
     api_urls = {
-        'Gold':'https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=XAU'
-        'Natural Gas':'https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=NG'
+        'Gold':'https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=XAU',
+        'Natural Gas':'https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=NG',
         'S&P 500': 'https://api.polygon.io/v1/open-close/stock/SPY?adjusted=true&apiKey=YOUR_API_KEY',
         'Bitcoin': 'https://api.coindesk.com/v1/bpi/currentprice/BTC.json'
     }
