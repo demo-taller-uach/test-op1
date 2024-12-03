@@ -27,7 +27,7 @@ book_snippets = {
     "You never really understand a person until you consider things from his point of view."
     """,
     "The Catcher in the Rye": """
-    "Don’t ever tell anybody anything. If you do, you start missing everybody."
+    "Don’t ever tell anybody anything. If you do, you start missing everybody. Now Buy another copy of this book!"
     """,
     "Pride and Prejudice": """
     "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife."
