@@ -6,10 +6,10 @@ import pandas as pd
 def get_market_prices():
     # API endpoints for market prices (replace with actual API endpoints)
     api_urls = {
-        'Gold': 'https://api.example.com/gold',
-        'Natural Gas': 'https://api.example.com/natural_gas',
-        'S&P 500': 'https://api.example.com/sp500',
-        'Bitcoin': 'https://api.example.com/bitcoin'
+        'Gold': https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=XAU
+        'Natural Gas':https://api.commoditypriceapi.com/latest?apikey=YOUR_API_KEY&symbols=NG
+        'S&P 500': https://api.polygon.io/v1/open-close/stock/SPY?adjusted=true&apiKey=YOUR_API_KEY,
+        'Bitcoin': https://api.coindesk.com/v1/bpi/currentprice/BTC.json
     }
 
     prices = {}
@@ -17,7 +17,12 @@ def get_market_prices():
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            prices[asset] = data['price']
+    if asset == 'Gold' or asset == 'Natural Gas':
+            prices[asset] = data['rates'][0]['price']
+        elif asset == 'S&P 500':
+            prices[asset] = data['close']
+        elif asset == 'Bitcoin':
+            prices[asset] = data['bpi']['USD']['rate_float']
         else:
             prices[asset] = 'N/A'
     return prices
