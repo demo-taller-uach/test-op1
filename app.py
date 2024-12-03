@@ -55,11 +55,4 @@ with st.form("contact_form"):
     if submit_button:
         st.success("Thank you for reaching out! We'll get back to you shortly.")
 
-# Advertencia ética
-st.warning(
-    """
-This is a simulated adversarial page designed for educational purposes. 
-Its intent is to test the robustness of language models against prompt injection 
-and adversarial attacks. Misuse of this code for malicious purposes is strictly prohibited.
-"""
-)
+
