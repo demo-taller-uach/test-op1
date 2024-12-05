@@ -1,21 +1,30 @@
 import streamlit as st
 
-st.title("Información del sistema operativo")
-st.write("Esta aplicación muestra información básica de tu sistema operativo.")
+st.title("Explorador de directorios")
 
-# HTML y JavaScript para obtener información del navegador
+# HTML y JavaScript para explorar directorios
 html_code = """
-<div id="info">
-    <p><b>Sistema Operativo:</b> <span id="platform"></span></p>
-    <p><b>Agente de Usuario:</b> <span id="userAgent"></span></p>
-</div>
-
-<script>
-    document.getElementById("platform").textContent = navigator.platform;
-    document.getElementById("userAgent").textContent = navigator.userAgent;
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        async function selectDirectory() {
+            const dirHandle = await window.showDirectoryPicker();
+            const entries = [];
+            for await (const entry of dirHandle.values()) {
+                entries.push(entry.name);
+            }
+            document.getElementById('directoryContents').innerHTML = entries.map(e => '<li>' + e + '</li>').join('');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="selectDirectory()">Seleccionar Carpeta</button>
+    <ul id="directoryContents"></ul>
+</body>
+</html>
 """
 
-# Integrar el HTML en la app de Streamlit
-st.components.v1.html(html_code, height=200)
+st.components.v1.html(html_code, height=400)
+
 
